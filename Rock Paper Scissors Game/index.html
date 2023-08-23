@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper scissors Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@600&family=Barriecito&family=Montserrat&family=Nunito:wght@400;600&family=Playfair+Display&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="score-board">
+        <div class="title">
+          <img src="./images/logo.svg" alt="svg" />
+        </div>
+        <div class="score">
+          <p>SCORE</p>
+          <h1 id="score">0</h1>
+        </div>
+      </div>
+      <div class="hands">
+        <div class="paper">
+          <img
+            src="./images/icon-paper.svg"
+            alt="svg"
+            onclick="pickUserHand('paper')"
+          />
+        </div>
+        <div class="scissors">
+          <img
+            src="./images/icon-scissors.svg"
+            alt="svg"
+            onclick="pickUserHand('scissors')"
+          />
+        </div>
+        <div class="rock">
+          <img
+            src="./images/icon-rock.svg"
+            alt="svg"
+            onclick="pickUserHand('rock')"
+          />
+        </div>
+      </div>
+      <div class="contest">
+        <div class="userhand">
+          <h1>YOU PICKED</h1>
+          <div class="handImageContainer">
+            <img id="userPickImage" class="style-img-win" />
+          </div>
+        </div>
+        <div class="result">
+          <div class="result-text">
+            <h1 id="msg-result">YOU WIN</h1>
+          </div>
+          <div id="play" class="new-game" onclick="playAgain()">PLAY AGAIN</div>
+        </div>
+        <div class="computerHand">
+          <h1>THE HOUSE PICKED</h1>
+          <div class="handImageContainer">
+            <img class="style-img-lose" id="computerPickImage" src="" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
